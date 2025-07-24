@@ -1,0 +1,307 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box; /* Делает ограничения размеров элементов по их границе */
+    scroll-behavior: smooth;
+    overflow-anchor: none; /* Запоминает положение на странице и после обновления автоматически прокручивает к тому же элементу */
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    background-image: url(./Фото/основная/Главное\ фото.png);
+    background-repeat: no-repeat;
+    background-size: 1570px auto;
+    height: 1000px;
+}
+
+.conteiner{
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.telo1{
+    display: flex;
+    padding-left: 70px;
+    padding-top: 20px;
+}
+
+.bok_button{
+    border: none;
+    background-color: transparent; /* Делает фон прозрачным */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.telo1_text1{
+    font-family: 'Megrim', sans-serif;
+    font-size: 128px;
+    line-height: 130px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    cursor: default;
+}
+
+.telo1_text2{
+    margin-left: 550px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 180px;
+    line-height: 200px;
+    font-weight: 600;
+    color: rgba(216, 216, 216, 0.6);
+    rotate: 90deg;
+    margin-top: 84px;
+    cursor: default;
+}
+
+.prav_menu{
+    margin-left: 220px;
+    padding-top: 10px;
+}
+
+.but_menu{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 45px;
+    border: none;
+    background-color: transparent; /* Делает фон прозрачным */
+    cursor: pointer;
+}
+
+.telo1_niz{
+    margin-top: 270px;
+    margin-left: 70px;
+}
+
+.telo1_niz_nav{
+    margin-top: 30px;
+}
+    
+.lipeck{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.telo1_niz_nav{
+    display: flex;
+}
+
+.niz_nav_button{
+    display: flex;
+    margin-left: 300px;
+    align-items: center
+}
+
+.but_menu_niz1{
+    margin-right: 55px
+}
+
+.but_menu_niz{
+    margin-right: 97px;
+}
+
+.but_menu_niz2{
+    margin-left: -42px;
+}
+
+.but_menu_niz1, .but_menu_niz2, .but_menu_niz{
+    border: none;
+    background-color: transparent; /* Делает фон прозрачным */
+    cursor: pointer;
+}
+
+.main{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 255px;
+    padding-right: 15px;
+    
+}
+
+.telo2{
+    display: flex;
+    margin-bottom: 100px;
+    padding-left: 50px;
+}
+
+.telo2_foto{
+    padding-left: 30px;
+}
+
+.telo3{
+    padding-left: 40px;
+}
+
+.telo3_zag{
+    font-family: 'Khula', sans-serif;
+    font-size: 32px;
+    line-height: 51px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.telo3_text_osnova{
+    font-family: 'Khula', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.telo4{
+    margin-top: 100px;
+}
+
+.obnovlenya{
+    background-color: rgba(203, 203, 203, 0.2);
+    width: 1047px;
+    height: 418px;
+    margin-left: 90px;
+    
+}
+
+.telo4_zag{
+    font-family: 'Khula', sans-serif;
+    font-size: 32px;
+    line-height: 51px;
+    font-weight: 400;
+}
+
+.zag_formy{
+    margin-left: 375px;
+    padding-top: 40px;
+}
+
+.formy_text{
+    font-family: 'Khula', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.text_formy{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 410px;
+}
+
+#email{
+    width: 200px;
+    height: 65px;
+    background-color: rgb(245, 245, 245);
+    border-color: rgba(0, 0, 0, 0.29);
+    font-size: 25px;
+}
+
+::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.64);
+    text-align: center;
+}
+
+.otpravit{
+    width: 200px;
+    height: 65px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 300;
+    margin-left: 95px;
+    cursor: pointer;
+}
+
+form{
+    margin-left: 280px;
+}
+
+.text_obnov_podpis{
+    padding-top: 32px;
+    margin-left: 410PX;
+}
+
+.ob_podpis{
+    font-family: 'Roboto', sans-serif;
+    font-size: 8px;
+    line-height: 9px;
+    font-weight: 300;
+    color: rgb(130, 130, 130);
+}
+
+.footer{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 255px;
+    padding-right: 15px;
+}
+
+.footer_menu{
+    padding-top: 130px;
+    display: flex;
+    margin-left: 90px;
+}
+
+.footer_menu_list2{
+    margin-left: 330px;
+}
+
+.footer_menu_items1{
+    padding-bottom: 20px;
+}
+
+.footer_menu_zag{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+}
+
+.footer_menu_item{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+}
+
+.footer_menu_item:hover{
+    text-decoration: underline;
+}
+
+.footer_sety{
+    margin-left: 90px;
+    padding-top: 147px;
+    padding-bottom: 61px;
+}
+
+.footer_sety_item{
+    display: inline;
+    margin-right: 50px;
+}
+
+.footer_sety_item_app{
+    display: inline;
+    margin-left: 134px;
+    margin-right: 50px;
+}
