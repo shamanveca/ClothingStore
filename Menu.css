@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box; /* Делает ограничения размеров элементов по их границе */
+    scroll-behavior: smooth;
+    overflow-anchor: none; /* Запоминает положение на странице и после обновления автоматически прокручивает к тому же элементу */
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.list{
+    width: 900px;
+    height: 800px;
+    background-color: rgb(242, 242, 242);
+}
+
+.up{
+    padding-top: 38px;
+    margin-bottom: 13px;
+}
+
+.flex_conteiner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex_item{
+    text-align: center;
+}
+
+.text_cont{
+    padding-top: 15px;
+}
+
+.text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23.5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.center{
+    width: 900px;
+    height: 220px;
+    background-color: rgb(0, 38, 84);
+}
+
+.center_flex_cont{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 45px;
+}
+
+.center_flex_item{
+    margin-right: 49px;
+}
+
+.down{
+    padding-top: 22px;
+}
+
+.sale{
+    position: relative;
+}
+
+.linc_text{
+    position: absolute;
+    z-index: 2;
+    top: -104px;
+    left: 33px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+    color: rgb(242, 242, 242);
+}
