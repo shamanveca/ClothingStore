@@ -30,36 +30,220 @@ header{
 .conteiner{
     margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px;
-    
+
 }
 
 .telo1{
     display: flex;
     padding-left: 70px;
     padding-top: 20px;
+    position: relative;
 }
 
-.bok_button{
-    border: none;
-    background-color: transparent; /* Делает фон прозрачным */
-    cursor: pointer;
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    transition: 0.5s ease;
+
+/* адаптация бургер эмблемы для анимации */
+#nav-icon3 {
+  width: 40px;
+  height: 30px;
+  top: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 101;
 }
 
-.bok_button:hover{
-    background-color: rgba(255, 255, 255, 0.24);
-    border: 1.5px solid rgba(90, 159, 244, 0.503);
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.199)
+/* Делаем сами черточки в бургер эмблеме и также адаптируем анимацию */
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-.bok_menu_img{
-    margin-top: 5px;
+/* Раздвигаем черточки после абсолютного пазиционирования */
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
 }
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 12px;
+}
+#nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+/* прописываем саму анимацию для каждой черточки */
+#nav-icon3.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#nav-icon3.open span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+.sidebar #nav-icon3 span {
+    background: #fff;
+}
+
+/* Делаем затемненный задний фон для меню */
+.hidden-overley {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #000000;
+    opacity:0;
+    width:0;
+    height:0;
+    transition: opacity 1s;
+}
+
+/* Настраиваем показ и прозрачность заднего меню при показе бокового меню */
+.hidden-overley.show {
+    height: 100%;
+    width: 100%;
+    opacity:0.5;
+    transition: opacity 1s;
+}
+
+/* Задаем стиль блока меню и скрываем его */
+.sidebar{
+  position: fixed;
+  z-index:100;
+  width: 900px;
+  height: 800px;
+  background-color: rgba(242, 242, 242, 0.85);
+  left: -1000px;
+  top:30px;
+  transition: left 0.4s ease;
+}
+
+.sidebar.show{
+  left: 70px;
+}
+
+.up{
+    padding-top: 28px;
+    margin-bottom: 13px;
+}
+
+.flex_conteiner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex_item{
+    text-align: center;
+}
+
+.text_cont{
+    padding-top: 15px;
+}
+
+.text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23.5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.text::after{
+    position: absolute;
+    content: '';
+    left: 0%; /* Подчеркивание начинается с начала текста */
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background: rgb(0, 115, 255, 0.75);
+    transition: 0.5s;
+}
+
+.text:hover::after{
+    width: 100%;
+}
+
+
+.img_cont{
+    transition: 0.5s ease; 
+}
+
+.img_cont:hover{
+    border: 3px solid rgba(0, 115, 255, 0.75);
+    border-radius: 50%;
+}
+
+.center{
+    width: 900px;
+    height: 220px;
+    background-color: rgb(0, 38, 84);
+}
+
+.center_flex_cont{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 45px;
+}
+
+.center_flex_item{
+    margin-right: 49px;
+}
+
+.down{
+    padding-top: 22px;
+}
+
+.sale{
+    position: relative;
+}
+
+.linc_text{
+    position: absolute;
+    z-index: 2;
+    top: -104px;
+    left: 33px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+    color: rgb(242, 242, 242);
+}
+
 
 .telo1_text1{
     font-family: 'Megrim', sans-serif;
@@ -83,7 +267,7 @@ header{
 }
 
 .prav_menu{
-    margin-left: 205px;
+    margin-left: 205px;  
     padding-top: 10px;
 }
 
@@ -102,6 +286,10 @@ header{
     border: 1.5px solid rgba(90, 159, 244, 0.503);
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.199);
+}
+
+.but_menu:active{
+    transform: translateY(2px);
 }
 
 #but_foto_1, #but_foto_3, #but_foto_4{
